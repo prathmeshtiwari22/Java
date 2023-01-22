@@ -1,0 +1,62 @@
+import java.util.*;
+class STD {
+int RN;
+String Name;
+int marks,ds,maths,dlcoa,oopm,cg;
+Scanner sc=new Scanner(System.in);
+
+void read ()
+{
+System.out.println("enter the roll no of student");
+RN=sc.nextInt();
+System.out.println("enter the name of student");
+Name=sc.nextLine();
+System.out.println("enter the marks of student in maths,ds,dlcoa,oopm,cg");
+ maths=sc.nextInt();
+ ds=sc.nextInt();
+dlcoa=sc.nextInt();
+oopm=sc.nextInt();
+cg=sc.nextInt();
+marks=maths+ds+oopm+cg+dlcoa;
+}
+
+public void display()
+{
+ System.out.println("the roll no of student is:"+RN );
+ System.out.println(" the NAME of student is :"+ Name);
+ System.out.println("marks in total is:"+ marks);
+}
+}
+
+interface SportsQ
+{
+final int smarks=10;
+public void displaysmarks();
+}
+
+
+class marksheet extends STD implements SportsQ
+{
+int newtotal;
+double per;
+public void displaysmarks()
+{
+System.out.println("Sports marks :"+smarks);
+}
+
+public void displaymarksheet() {
+ newtotal=marks+smarks;
+ per=newtotal/5.0;
+}
+}
+
+class Demo {
+public static void main(String args[]) {
+marksheet m1 =new marksheet();
+m1.read();
+m1.displaysmarks();
+m1.displaymarksheet();
+   
+}
+   
+}
