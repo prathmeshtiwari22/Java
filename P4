@@ -1,0 +1,32 @@
+// Online Java Compiler
+// constructor overloading
+import java.util.*;
+class Std {
+int roll;
+String Name;
+public void read() {
+Scanner sc= new Scanner(System.in);
+Name=sc.nextLine();
+roll=sc.nextInt();
+}
+public void display() {
+System.out.println("NAME:" +Name+ "ROLL NO:"+roll);
+}
+Std() {
+Name="******";
+roll=00;
+}
+
+Std(int r,String N)
+{
+System.out.println("NAME:" +Name+ "ROLL NO:"+roll);
+ }}
+class Helloworld  {
+public static void main(String[] args) {
+Std s1=new Std();
+s1.read();
+s1.display();
+Std s2=new Std(2,"man");
+s2.display();
+    }
+ }
