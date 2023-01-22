@@ -1,0 +1,33 @@
+
+import java.util.*;
+public class countalphabets {
+public static void main(String args[]) {
+String str;
+int alpha=0,num=0,space=0,Special=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("ENTER THE STRING");
+str=sc.nextLine();
+for(int i=0;i<str.length();i++) {
+char ch=str.charAt(i);
+if(ch>='A' && ch<='Z' || ch>='a' && ch<='z') {
+alpha++;
+}
+else if(ch>='0' && ch<='9') {
+num++;
+}
+else if(ch>='0' && ch<='9') {
+num++;
+}
+else if(ch==' ') {
+space++;
+}
+else {
+Special++;    
+}
+}
+System.out.println("\nALPHABET LETTERS:"+ alpha);
+System.out.println("\nNUMBERS:"+num);
+System.out.println("\nSPACE IN LETTERS:"+space);
+System.out.println("\nSPECIAL LETTERS:"+Special);
+}
+}
