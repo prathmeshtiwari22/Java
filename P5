@@ -1,0 +1,29 @@
+class Two extends Thread {
+int x;
+public void run() {
+x=2;
+int i;
+for(i=1;i<=10;i++) {
+System.out.println("2 *" +i+"="+x*i);
+}
+}
+}
+class Ten extends Thread {
+int x;
+public void run() {
+x=10;
+int i;
+for(i=1;i<=10;i++) {
+System.out.println("10*" +i+"="+x*i);
+}
+}
+}
+class Hell {
+public static void main(String[] args) {
+Two s2 = new Two();
+Ten s10 = new Ten();
+s2.start();
+s10.start();
+
+}
+}
